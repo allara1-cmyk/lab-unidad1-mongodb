@@ -1,7 +1,8 @@
 // Archivo: operaciones.mongodb
 use('techstore');
 // Limpieza inicial para pruebas
-db.productos.drop();
+
+//db.productos.drop();
 
 // Crear coleccion proveedor
 
@@ -31,3 +32,49 @@ db.proveedores.insertOne({
   direccion: "Av. Amazonas 321, Quito"
 });
 
+// Buscar el proveedor por nombre y guardar su _id en una variable
+var proveedor = db.proveedores.findOne({ nombre: "Tech Import S.A." });
+var idProveedor = proveedor._id;
+
+// Insertar los tres productos usando el idProveedor
+db.productos.insertMany([
+  {
+    nombre: "Samsung Galaxy A35",
+    marca: "Samsung",
+    precio: 499,
+    stock: 30,
+    descripcion: "Smartphone con pantalla AMOLED y cámara de 64 MP",
+    categoria: {
+      nombre_categoria: "Smartphones",
+      descripcion: "Dispositivos móviles inteligentes de última generación"
+    },
+    proveedor_id: idProveedor,
+    fecha_creacion: ISODate("2025-10-28T00:00:00Z")
+  },
+  {
+    nombre: "Laptop Acer Aspire 5",
+    marca: "Acer",
+    precio: 850,
+    stock: 12,
+    descripcion: "Laptop ligera con pantalla Full HD y procesador Intel Core i7",
+    categoria: {
+      nombre_categoria: "Laptops",
+      descripcion: "Computadoras portátiles para uso académico y profesional"
+    },
+    proveedor_id: idProveedor,
+    fecha_creacion: ISODate("2025-10-28T00:00:00Z")
+  },
+  {
+    nombre: "LG UltraGear 27GN950",
+    marca: "LG",
+    precio: 420,
+    stock: 20,
+    descripcion: "Monitor 4K UHD con frecuencia de actualización de 144Hz",
+    categoria: {
+      nombre_categoria: "Monitores",
+      descripcion: "Pantallas de alta resolución para trabajo y gaming"
+    },
+    proveedor_id: idProveedor,
+    fecha_creacion: ISODate("2025-10-28T00:00:00Z")
+  }
+]);
