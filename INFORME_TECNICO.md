@@ -14,3 +14,9 @@ A continuación, se presenta una tabla comparativa entre el modelo relacional (S
 | **Mantenimiento** | Complejo al modificar el modelo de datos. | Sencillo, gracias al esquema dinámico. | Facilita la adaptación ante nuevos tipos de productos o características. |
 
 > Para el caso de **TechStore**, el modelo **NoSQL (MongoDB)** ofrece mayor adaptabilidad, escalabilidad y rendimiento en comparación con SQL, dado el carácter variable del inventario y la naturaleza semi-estructurada de los datos de los productos.
+
+## 🧩 Fase 2: Diseño del Modelo Relacional (Conceptual)
+
+Usando **Lucidchart**, se creao un **Diagrama Entidad-Relación (DER)** del sistema **TechStore**, representando las entidades principales, sus relaciones y cardinalidades.
+
+![Diagrama Modelo Relacional](./imagenes/modelo_relacional.png)
