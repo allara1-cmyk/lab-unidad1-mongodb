@@ -17,7 +17,7 @@ A continuación, se presenta una tabla comparativa entre el modelo relacional (S
 
 ## Diseño del Modelo Relacional (Conceptual)
 
-Usando **Lucidchart**, se creao un **Diagrama Entidad-Relación (DER)** del sistema **TechStore**, representando las entidades principales, sus relaciones y cardinalidades.
+Usando **Lucidchart**, se creó un **Diagrama Entidad-Relación (DER)** del sistema **TechStore**, que representa las entidades principales, sus relaciones y cardinalidades.
 
 ![Diagrama Modelo Relacional](./imagenes/modelo_relacional.png)
 
