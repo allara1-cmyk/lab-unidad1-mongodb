@@ -23,7 +23,6 @@ db.createCollection('proveedores', {
   }
 });
 
-
 // Insertar Proveedor de prueba
 db.proveedores.insertOne({
   nombre: "Tech Import S.A.",
@@ -78,8 +77,6 @@ db.productos.insertMany([
     fecha_creacion: ISODate("2025-10-28T00:00:00Z")
   }
 ]);
-*/
-
 
 // Mostrar todos los productos en la colección
 db.productos.find();
@@ -103,20 +100,4 @@ db.productos.find(
 db.productos.find(
   { "categoria.nombre_categoria": "Smartphones" },
   { nombre: 1, precio: 1, stock: 1, _id: 0 }
-);
-
-// Buscar un Smartphone por nombre o categoría y reducir su stock en 1 unidad
-db.productos.updateOne(
-  { "categoria.nombre_categoria": "Smartphones" },
-  { $inc: { stock: -1 } }
-);
-// Actualizar su precio y añadir el campo 'ultima_revision' con la fecha actual
-db.productos.updateOne(
-  { "categoria.nombre_categoria": "Laptops" },
-  { 
-    $set: { 
-      precio: 950, 
-      ultima_revision: new Date() 
-    } 
-  }
 );
