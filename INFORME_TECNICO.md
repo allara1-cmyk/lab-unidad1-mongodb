@@ -30,7 +30,6 @@ A continuación, se presenta la **estructura base** del documento y dos ejemplos
 ### Estructura general del documento
 ```json
 // Colección: productos
-// Colección: productos
 {
   "_id": ObjectId(),
   "nombre": "Laptop Acer Aspire 5",
