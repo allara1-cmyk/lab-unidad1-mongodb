@@ -15,8 +15,33 @@ A continuación, se presenta una tabla comparativa entre el modelo relacional (S
 
 > Para el caso de **TechStore**, el modelo **NoSQL (MongoDB)** ofrece mayor adaptabilidad, escalabilidad y rendimiento en comparación con SQL, dado el carácter variable del inventario y la naturaleza semi-estructurada de los datos de los productos.
 
-## 🧩 Fase 2: Diseño del Modelo Relacional (Conceptual)
+## Diseño del Modelo Relacional (Conceptual)
 
 Usando **Lucidchart**, se creao un **Diagrama Entidad-Relación (DER)** del sistema **TechStore**, representando las entidades principales, sus relaciones y cardinalidades.
 
 ![Diagrama Modelo Relacional](./imagenes/modelo_relacional.png)
+
+## Diseño del Modelo NoSQL (MongoDB)
+
+A continuación, se presenta la **estructura base** del documento y dos ejemplos específicos que demuestran la **flexibilidad del esquema**.
+
+---
+
+### Estructura general del documento
+```json
+// Colección: productos
+// Colección: productos
+{
+  "_id": ObjectId(),
+  "nombre": "Laptop Acer Aspire 5",
+  "marca": "Acer",
+  "precio": 850,
+  "stock": 12,
+  "descripcion": "Laptop ligera con pantalla Full HD y procesador Intel Core i7",
+  "categoria": {
+    "nombre_categoria": "Laptops",
+    "descripcion": "Computadoras portátiles para uso académico y profesional"
+  },
+  "proveedor_id": ObjectId("672fb0109f1a2c45e2a67b01"), // referencia al proveedor
+  "fecha_creacion": ISODate("2025-10-28T00:00:00Z")
+}
