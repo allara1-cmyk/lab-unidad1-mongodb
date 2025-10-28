@@ -44,5 +44,76 @@ A continuación, se presenta la **estructura base** del documento y dos ejemplos
   "proveedor_id": ObjectId("672fb0109f1a2c45e2a67b01"), // referencia al proveedor
   "fecha_creacion": ISODate("2025-10-28T00:00:00Z")
 }
+```
+---
 
+## Resultados de la Ejecución
 
+Se usaron las operaciones respectivas para la coleccion **productos**, como esta tiene un campo llamado id_proveedor  se tuvo que insertar un dato en al coleccion **proveedor** a manera de ejemplo del sistema **TechStore**.
+
+### Insercion del Proveedor de prueba
+
+![Proveedor Prueba](./imagenes/proveedorPrueba.png)
+
+### Insercion de Datos
+
+Se realizo una busqueda del proveedor por medio de su nombre y se retorna ese documento, luego se llama su id y se almacena en una variable para ser llama despues en las inserciones.
+
+![Proveedor Prueba](./imagenes/BusquedIdInsercion.png)
+
+### Lectura de Datos
+
+#### Mostrar todos los datos
+
+Se listado de todos los documentos de la coleccion.
+
+![Proveedor Prueba](./imagenes/MostrarTodos%20los%20productos.png)
+
+#### Mostrar todos los productos de tipo laptop
+
+Se listado de todos los documentos que coinciden con la categoria Laptops.
+
+![Proveedor Prueba](./imagenes/busquedaLaptop.png)
+
+#### Mostrar productos mayores a 10 unidades y menores que 1000
+
+Se listado de todos los documentos que el stock sea mayor a 10 unidades y menor que 1000.
+
+![Proveedor Prueba](./imagenes/MayorMenor.png)
+
+### Actualización de Datos
+#### Visualizar datos
+
+Visualizar el stock antes de los smartphones antes de actualizar.
+
+![Proveedor Prueba](./imagenes/visualizarAntes1.png)
+
+#### Actualizar datos
+
+Visualizar el stock antes de los smartphones antes de actualizar.
+
+![Proveedor Prueba](./imagenes/Actualizar1.png)
+
+#### Comprobar
+
+Se listo nuevamente el documento para ver los cambios en stock.
+
+![Proveedor Prueba](./imagenes/comprobar1.png)
+
+#### Visualizar datos
+
+Se procedio a realizar otra actualizacion, para ello se visualiza  antes de actualizar.
+
+![Proveedor Prueba](./imagenes/ver2.png)
+
+#### Actualizar datos
+
+Se agrega un nuevo campo al documento que pertenezca a la categoria Laptops.
+
+![Proveedor Prueba](./imagenes/Actulizar2.png)
+
+#### Comprobar
+
+Se listo nuevamente el documento para ver el nuevo campo agregado.
+
+![Proveedor Prueba](./imagenes/comprobar2.png)
