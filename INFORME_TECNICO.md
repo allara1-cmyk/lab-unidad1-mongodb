@@ -44,3 +44,5 @@ A continuación, se presenta la **estructura base** del documento y dos ejemplos
   "proveedor_id": ObjectId("672fb0109f1a2c45e2a67b01"), // referencia al proveedor
   "fecha_creacion": ISODate("2025-10-28T00:00:00Z")
 }
+
+

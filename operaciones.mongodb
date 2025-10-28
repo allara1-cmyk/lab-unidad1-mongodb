@@ -1,0 +1,33 @@
+// Archivo: operaciones.mongodb
+use('techstore');
+// Limpieza inicial para pruebas
+db.productos.drop();
+
+// Crear coleccion proveedor
+
+use('techstore');
+
+db.createCollection('proveedores', {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      required: ["nombre", "telefono", "email", "direccion"],
+      properties: {
+        nombre: { bsonType: "string" },
+        telefono: { bsonType: "string" },
+        email: { bsonType: "string" },
+        direccion: { bsonType: "string" },
+      }
+    }
+  }
+});
+
+
+// Insertar Proveedor de prueba
+db.proveedores.insertOne({
+  nombre: "Tech Import S.A.",
+  telefono: "0998765432",
+  email: "ventas@techimport.ec",
+  direccion: "Av. Amazonas 321, Quito"
+});
+
