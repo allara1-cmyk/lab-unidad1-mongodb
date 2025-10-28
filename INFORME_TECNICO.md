@@ -117,3 +117,9 @@ Se agrega un nuevo campo al documento que pertenezca a la categoria Laptops.
 Se listo nuevamente el documento para ver el nuevo campo agregado.
 
 ![Proveedor Prueba](./imagenes/comprobar2.png)
+
+### Coleccion de MongoDB en VSC
+
+Estado de la Coleccion de Mongo DB Atlas visualizada en la extension de Visual Studio Code
+
+![Proveedor Prueba](./imagenes/mongoColeccion.png)
