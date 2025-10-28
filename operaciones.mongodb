@@ -2,7 +2,7 @@
 use('techstore');
 // Limpieza inicial para pruebas
 
-//db.productos.drop();
+db.productos.drop();
 
 // Crear coleccion proveedor
 
@@ -78,3 +78,29 @@ db.productos.insertMany([
     fecha_creacion: ISODate("2025-10-28T00:00:00Z")
   }
 ]);
+*/
+
+
+// Mostrar todos los productos en la colección
+db.productos.find();
+
+//  Mostrar solo los productos que sean de tipo Laptop
+db.productos.find(
+  { "categoria.nombre_categoria": "Laptops" }
+);
+
+//  Mostrar los productos con más de 10 unidades en stock y un precio menor a 1000
+db.productos.find(
+  { stock: { $gt: 10 }, precio: { $lt: 1000 } }
+);
+//   Mostrar solo el nombre, precio y stock de los "Smartphone"
+db.productos.find(
+  { "categoria.nombre_categoria": "Smartphones" },
+  { nombre: 1, precio: 1, stock: 1, _id: 0 }
+);
+
+//   Mostrar solo el nombre, precio y stock de los "Smartphone"
+db.productos.find(
+  { "categoria.nombre_categoria": "Smartphones" },
+  { nombre: 1, precio: 1, stock: 1, _id: 0 }
+);
